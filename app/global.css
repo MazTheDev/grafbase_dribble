@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Inter;
+}
+
+
+.paddings {
+    @media screen and (min-width: 1024px) {
+        padding-left: 5rem
+            /* 80px */
+        ;
+        padding-right: 5rem
+            /* 80px */
+        ;
+    }
+
+    ;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+}
+
+
+.flexCenter {
+    @apply flex justify-center items-center;
+}
+
+.flexBetween {
+    @apply flex justify-between items-center;
+}
+
+.flexStart {
+    @apply flex items-center justify-start;
+}
+
+.text-small {
+    @apply text-sm font-medium;
+}
+
+.navbar {
+    @apply py-5 px-8 border-b border-nav-border gap-4;
+}
+
+.footer {
+    @apply flex-col paddings w-full gap-20 bg-light-white;
+}
+
+.footer_copyright {
+    @media not all and (min-width: 640px) {
+        flex-direction: column;
+    }
+
+    @apply w-full text-sm font-normal;
+}
+
+.footer_column {
+    @apply flex-1 flex flex-col gap-3 text-sm min-w-max;
+}
